@@ -18,6 +18,9 @@ body {
 .bg-black {
   background-color: #000;
 }
+.gris {
+  background-color: #e2e2e2;
+}
 
 .contenedor {
   max-width: 1600px;
@@ -175,18 +178,17 @@ body {
 /**------------------------------
 ---------EXPLORE----------------
 -------------------------------**/
-.gris {
-  background-color: #b0b0b0;
-}
-.section_explore {
+
+.total {
   height: 100vh;
 }
+
 .explore {
   display: grid;
-  gap: 3rem;
+
   grid-template:
-    "uno dos tres " 300px
-    "cuatro dos sexto" 300px
+    "uno dos tres " 380px
+    "cuatro dos sexto" 380px
     "septimo octavo noveno" 150px / auto auto auto;
 }
 
@@ -195,7 +197,6 @@ body {
   align-items: end;
   justify-content: center;
   font-size: 32px;
-  
   text-transform: capitalize;
 }
 
@@ -204,53 +205,54 @@ body {
 }
 .dos {
   grid-area: dos;
+}
+
+.imagen {
+  width: 600px;
+}
+.grafico {
   display: flex;
 
   align-items: center;
 
+  justify-content: center;
+
   flex-direction: column;
+
+  gap: 3rem;
 }
+
+.flecha {
+  background-color: transparent;
+  border: none;
+  font-size: 42px;
+}
+
 .tres {
   grid-area: tres;
 }
+
 .cuatro {
   grid-area: cuatro;
 }
-.texto_medio {
+
+.text_medio {
   rotate: -90deg;
   display: flex;
   justify-content: center;
   align-items: start;
+
   font-size: 28px;
   font-weight: 800;
 }
-.grafico {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 3rem;
-}
-.flecha {
-  background: transparent;
-  border: none;
-  font-size: 42px;
-}
+
 .cinco {
   grid-area: dos;
-
-  display: n;
-
-  background-color: none;
 }
-.imagen {
-  font-size: 30px;
-}
+
 .sexto {
   grid-area: sexto;
   rotate: 90deg;
-  display: flex;
-  font-weight: 800;
 }
 
 .septimo {
@@ -260,52 +262,124 @@ body {
   padding: 0px 30px;
   font-size: 28px;
   font-weight: 800;
+  padding-bottom: 40px;
 }
 
 .octavo {
   grid-area: octavo;
-
 }
 
 .noveno {
   grid-area: noveno;
   display: flex;
-  justify-content: start;
+  justify-content: end;
+  padding: 0px 30px;
+  font-size: 28px;
   font-weight: 800;
+  padding-bottom: 40px;
 }
 
-/**------------------------------
----------Card----------------
--------------------------------**/
-.contenedor_card{
+/**----------------------------------------------
+-------------------CARD-------------------------
+------------------------------------------------**/
+
+.contenedor_card {
   display: flex;
   gap: 6rem;
-  padding-top:90px;
-  padding-bottom:90px ;
+  padding-top: 90px;
+  padding-bottom: 90px;
   justify-content: center;
-  
 }
-.card{
- width: 280px;
- border: solid 1px #d6cbcb;
- padding: 22px;
- display: flex;
- flex-direction: column;
- gap: 1rem;
- align-items: center;
- border-radius: 50px;
- box-shadow: 0px 1px 10px #000;
-}
-.card__title{
-text-align: center;
-font-size: 30px;
-padding:4px 0;
+.card {
+  display: flex;
+  width: 300px;
+  border: solid 2px #ffffff;
+  padding: 22px;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0 0px 10px 0px #d9d9d9;
+  background-color: #ebebeb;
 }
 
-.card__text{
-text-align: center;
+.card__title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 4px 0;
 }
 
-.card--border{
-border:solid 2px var(--color-primary) ;
+.card__text {
+  text-align: center;
+}
+
+.card--border {
+  border: solid 2px var(--color-primary);
+}
+
+/**-----------------------------------------------------
+-------------------TRABAJO------------------------------
+-----------------------------------------------------**/
+
+.contenedor_work {
+  display: grid;
+  grid-template:
+    "texto centrado imagen" 200px
+    "texto centrado imagen" 300px
+    "texto centrado imagen" 150px / auto auto auto;
+  background-color: #812181;
+  grid-template-columns: auto;
+}
+.work_text {
+  grid-area: texto;
+}
+
+.work_centro {
+  grid-area: centrado;
+}
+
+.work_img {
+  grid-area: imagen;
+}
+
+/**-----------------------------------------------------
+-------------------Negrito con sombrero------------------------------
+-----------------------------------------------------**/
+.contenedor2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas de igual ancho */
+  grid-gap: 10px; /* Espacio entre columnas */
+  background-color: antiquewhite;
+}
+
+.item1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 350px;
+}
+
+.txt {
+  transform: rotate(90deg);
+  margin-right: auto;
+}
+
+.item3 {
+  display: grid;
+  align-items: center;
+  gap:none;
+}
+.titulo2{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  font-size:40px ;
+}
+.parrafo2{
+  font-size: 30px;
+  margin:0;
+}
+.texto5{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
